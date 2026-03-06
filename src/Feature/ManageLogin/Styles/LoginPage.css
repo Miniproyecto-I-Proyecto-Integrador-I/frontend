@@ -20,9 +20,10 @@ body {
 .login-page-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 /* Background blob */
@@ -55,6 +56,7 @@ body {
     align-items: center;
     padding: 2rem;
     z-index: 1;
+    box-sizing: border-box;
 }
 
 .login-card {
@@ -80,6 +82,37 @@ body {
 
 .login-card-content {
     padding: 2.5rem;
+}
+
+/* Auth Tabs */
+.auth-tabs-container {
+    display: flex;
+    background-color: #EEF2F5; /* Light gray pill background */
+    border-radius: 9999px;
+    padding: 4px;
+    margin-bottom: 2.25rem;
+}
+
+.auth-tab {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 9999px; /* Pill shape for each tab */
+    transition: all 0.2s ease;
+}
+
+.auth-tab:hover {
+    color: var(--text-dark);
+}
+
+.auth-tab.active {
+    background-color: var(--white);
+    color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .login-title {
